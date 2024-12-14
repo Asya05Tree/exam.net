@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Chat";
+}
+
+<div class="chat-container">
+    <div class="card">
+        <div class="card-header">
+            <h3>SignalR Chat</h3>
+        </div>
+        <div class="card-body">
+            <div id="chatMessages" class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Ваше ім'я" required />
+                <input type="text" id="messageInput" placeholder="Введіть повідомлення" required />
+                <select id="botSelect" class="form-control bot-select">
+                    <!-- Список -->
+                </select>
+                <button id="sendButton" disabled>Надіслати</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/signalr/signalr.min.js"></script>
+    <script src="~/js/chat.js"></script>
+}
